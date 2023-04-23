@@ -1,0 +1,109 @@
+:root {
+--DesaturatedRed: hsl(0, 36%, 70%);
+--SoftRed: hsl(0, 93%, 68%);
+--DarkGrayishRed: hsl(0, 6%, 24%);
+--linearone:Linear,
+    135deg,
+    from hsl(0, 0%, 100%),
+    to hsl(0, 100%, 98%);
+--lineartwo:Linear,
+    135deg,
+    from hsl(0, 80%, 86%),
+    to hsl(0, 74%, 74%);
+}
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    flex-direction: row;
+}
+.left-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.left-container .logo {
+    width: 200px;
+    height: 100px;
+    background-image: url(./images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 50px 0px 0px 120px;
+}
+.left-container .title {
+    color: var(--DesaturatedRed);
+    margin: 70px 0px 0px 120px;
+    font-size: 80px;
+    font-weight: 300;
+    width: 255px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.title .part2 {
+    color: var(--DarkGrayishRed);
+    font-weight: 600;
+}
+.left-container .desc {
+    color: var(--DesaturatedRed);
+    width: 439px;
+    margin: 10px 0px 0px 120px;
+    line-height: 25px;
+}
+.left-container .data-form{
+    margin: 30px 0px 0px 120px;
+    display: flex;
+    position: relative;
+    width: 435px;
+    height: 60px;
+}
+.data-form .cus-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border:1px solid var(--DesaturatedRed);
+    padding-left: 20px;
+    outline: none;
+    font-weight: 600;
+}
+.data-form .go {
+    width: 100px;
+    height: 55px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    right: -2px;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px 0px #00000045;
+    transition: 0.4s;
+}
+.go:hover {
+            background: linear-gradient(120deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        box-shadow: 0px 5px 6px 0px #00000045;
+}
+.error-icon {
+    position: absolute;
+    right: 110px;
+    top: 15px;
+}
+
+.message {
+    color: var(--SoftRed);
+    margin-left: 140px;
+}
+.error {
+    color: var(--SoftRed);
+}
+.hide {
+    display: none;
+}
